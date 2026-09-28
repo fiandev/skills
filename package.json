@@ -2,13 +2,16 @@
   "name": "skills",
   "version": "1.0.0",
   "description": "my personal agent skills",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "node tools/build.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "fiandev",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^26.6.3"
+    "@types/node": "^26.6.3",
+    "esbuild": "^0.28.2"
   }
 }

@@ -5,7 +5,9 @@ const [owner, repo] = first?.includes("/")
   : [first, second];
 
 if (!owner || !repo) {
-  console.error("Usage: bun scripts/repo-details.ts <owner> <repo>");
+  console.error("Usage: node scripts/repo-details.js <owner> <repo>");
+  console.error("   or: node scripts/repo-details.js <owner>/<repo>");
+  console.error("   or: bun scripts/repo-details.ts <owner> <repo>");
   console.error("   or: bun scripts/repo-details.ts <owner>/<repo>");
   process.exit(1);
 }

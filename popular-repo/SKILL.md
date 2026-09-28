@@ -16,7 +16,7 @@ Use this skill when the user wants trending/popular GitHub repositories, a "repo
 1. **Search popular repositories.** Use `scripts/repo-trending.ts`, which exports
    `getTrending(period)`. Run it with the requested period — one of
    `1day` (1), `1week` (7), `1month` (30) — defaulting to `1week` when unspecified:
-   `bun scripts/repo-trending.ts 1week`.
+   `node scripts/repo-trending.js 1week` or `bun scripts/repo-trending.ts 1week`.
    It returns `{ period, filter, since, total, repositories[] }`, where each repository
    has `rank`, `name`, `description`, `url`, `stars`, `forks`, `language`,
    `created_at`, `updated_at`. See `github-1week.json` for a sample payload.
@@ -26,8 +26,10 @@ Use this skill when the user wants trending/popular GitHub repositories, a "repo
 
 3. **Validate usefulness of each repo.** For every selected repo, run
    `scripts/repo-details.ts` with its owner and repo name:
+   `node scripts/repo-details.js <owner> <repo>` or
+   `node scripts/repo-details.js <owner>/<repo>` (with Bun:
    `bun scripts/repo-details.ts <owner> <repo>` or
-   `bun scripts/repo-details.ts <owner>/<repo>`.
+   `bun scripts/repo-details.ts <owner>/<repo>`).
    Check the returned `stats`, `metadata` (license, topics, last `pushed_at`),
    `features`, and `releases` to confirm the repo is active, non-archived,
    non-disabled, and genuinely useful. Drop any repo that fails validation and
