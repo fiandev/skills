@@ -31,7 +31,7 @@ npm install
 npm run build   # transpiles every **/*.ts script to a sibling .js
 ```
 
-Releases are automated: publishing a GitHub Release runs `.github/workflows/release.yml`, which compiles all `.ts` scripts to `.js` and commits the output back to the release branch.
+A husky pre-commit hook (`.husky/pre-commit`) runs the build automatically on every commit and stages the generated `.js`, so compiled scripts never go stale.
 
 ## License
 
