@@ -1,0 +1,23 @@
+{
+  "skill_name": "remotion-orchestactor",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Lower-third for Sarah Chen, Design Lead, accent #f72585, match template style",
+      "expected_output": "Parametrized LowerThird reusing lower-third.tsx motion + design tokens",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Bar chart Q3 Growth data [40,65,90,55,75] Jul-Nov, match dark gradient style",
+      "expected_output": "Parametrized Chart reusing chart-animation.tsx grow + palette",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "2-scene opener: cinematic title Our Journey + Acme logo reveal, consistent style",
+      "expected_output": "Composed opener reusing cinematic-title-intro + logo-spin-reveal, unified tokens",
+      "files": []
+    }
+  ]
+}
